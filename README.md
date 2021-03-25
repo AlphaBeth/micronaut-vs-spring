@@ -113,3 +113,10 @@ Config files can be environment specific (-Dmicronaut.environments) and they are
 [Micronaut docs](https://docs.micronaut.io/latest/guide/index.html#config)
 
 [Spring docs](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)
+
+## Demo 6. Aspect oriented programming.
+
+Spring's AOP is more powerful. It allows intercepting almost every method call with CGLIB's runtime proxies
+around beans and AspectJ's pointcuts.
+
+In Micronaut only annotated methods/classes could be intercepted.

@@ -1,5 +1,6 @@
 package com.alphabeth.micronaut.conf;
 
+import com.alphabeth.micronaut.aop.Loggable;
 import com.alphabeth.micronaut.serivces.RandomValueService;
 import com.alphabeth.micronaut.serivces.TestService;
 import com.alphabeth.micronaut.serivces.impl.FieldInjectionTestService;
@@ -22,6 +23,7 @@ public class BeansFactory {
     @Bean
     @Singleton // prototypes by default
     @Named("random")
+    @Loggable
     public TestService random(
             RandomValueService randomValueService // inject service
     ) {

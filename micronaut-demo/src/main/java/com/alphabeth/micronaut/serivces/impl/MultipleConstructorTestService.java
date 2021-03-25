@@ -1,5 +1,6 @@
 package com.alphabeth.micronaut.serivces.impl;
 
+import com.alphabeth.micronaut.aop.Loggable;
 import com.alphabeth.micronaut.serivces.RandomValueService;
 import com.alphabeth.micronaut.serivces.TestService;
 
@@ -12,6 +13,7 @@ public class MultipleConstructorTestService implements TestService {
     }
 
     @Override
+    @Loggable
     public String answer() {
         return "Another " + randomValueService.random();
     }
