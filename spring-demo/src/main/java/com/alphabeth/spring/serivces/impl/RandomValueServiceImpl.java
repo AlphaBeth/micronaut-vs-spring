@@ -9,12 +9,16 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @Slf4j
 public class RandomValueServiceImpl implements RandomValueService {
+
+    private final RandomValueConfig randomValueConfig;
+
     @Override
     public int random() {
-        return ThreadLocalRandom.current().nextInt(0, 42);
+        return ThreadLocalRandom.current().nextInt(randomValueConfig.getMin(), randomValueConfig.getMax());
     }
 
-    public RandomValueServiceImpl() {
+    public RandomValueServiceImpl(RandomValueConfig randomValueConfig) {
+        this.randomValueConfig = randomValueConfig;
         log.info("{} was created", this.getClass().getName());
     }
 

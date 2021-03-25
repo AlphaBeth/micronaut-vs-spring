@@ -5,8 +5,10 @@ import com.alphabeth.spring.serivces.TestService;
 import com.alphabeth.spring.serivces.impl.FieldInjectionTestService;
 import com.alphabeth.spring.serivces.impl.MethodInjectionTestService;
 import com.alphabeth.spring.serivces.impl.MultipleConstructorTestService;
+import com.alphabeth.spring.serivces.impl.RandomValueConfig;
 import com.alphabeth.spring.serivces.impl.RandomValueServiceImpl;
 import com.alphabeth.spring.serivces.impl.TestServiceImpl;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -15,7 +17,10 @@ import org.springframework.context.annotation.Scope;
 import java.util.Collections;
 
 @Configuration
+@AllArgsConstructor
 public class BeansFactory {
+
+    private final RandomValueConfig randomValueConfig;
 
     @Bean
     public TestService random(
@@ -49,6 +54,6 @@ public class BeansFactory {
 
     @Bean
     public RandomValueService testService() {
-        return new RandomValueServiceImpl();
+        return new RandomValueServiceImpl(randomValueConfig);
     }
 }

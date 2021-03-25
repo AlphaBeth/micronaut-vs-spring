@@ -11,10 +11,6 @@ public class MultipleConstructorTestService implements TestService {
         this.randomValueService = randomValueService;
     }
 
-    public MultipleConstructorTestService() {
-        this.randomValueService = new RandomValueServiceImpl();
-    }
-
     @Override
     public String answer() {
         return "Another " + randomValueService.random();

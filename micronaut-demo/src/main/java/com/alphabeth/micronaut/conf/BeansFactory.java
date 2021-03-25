@@ -5,6 +5,7 @@ import com.alphabeth.micronaut.serivces.TestService;
 import com.alphabeth.micronaut.serivces.impl.FieldInjectionTestService;
 import com.alphabeth.micronaut.serivces.impl.MethodInjectionTestService;
 import com.alphabeth.micronaut.serivces.impl.MultipleConstructorTestService;
+import com.alphabeth.micronaut.serivces.impl.RandomValueConfig;
 import com.alphabeth.micronaut.serivces.impl.RandomValueServiceImpl;
 import com.alphabeth.micronaut.serivces.impl.TestServiceImpl;
 import io.micronaut.context.annotation.Bean;
@@ -54,7 +55,9 @@ public class BeansFactory {
 
     @Bean
     @Singleton
-    public RandomValueService testService() {
-        return new RandomValueServiceImpl();
+    public RandomValueService testService(
+            RandomValueConfig randomValueConfig
+    ) {
+        return new RandomValueServiceImpl(randomValueConfig);
     }
 }
