@@ -99,3 +99,17 @@ Field, method and constructor injection is supported in Micronaut and Spring.
 ## Demo 4. Factory classes/Java config.
 
 We can create classes that define beans - @Factory in Micronaut, @Configuration in Spring.
+
+## Demo 5. Application configuration
+
+Application can be configured with:
+* properties files (yaml, json, properties)
+* environment variables
+* java system properties
+
+Config files can be environment specific (-Dmicronaut.environments) and they are loaded from different locations
+(MICRONAUT_CONFIG_FILES).
+
+[Micronaut docs](https://docs.micronaut.io/latest/guide/index.html#config)
+
+[Spring docs](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)
