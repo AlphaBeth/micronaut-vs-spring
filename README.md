@@ -91,3 +91,7 @@ Java classes for bean definitions, and they register themselves in static initia
 | @io.micronaut.runtime.context.scope.ThreadLocal | @io.micronaut.runtime.context.scope.ThreadLocal |  |
 | @io.micronaut.runtime.context.scope.Refreshable | ~ @org.springframework.cloud.context.config.annotation.RefreshScope | Spring's refresh scope is Spring Cloud specific. Beans are recreated on specific events. |
 | @io.micronaut.runtime.http.scope.RequestScope | @Scope("request") |  |
+
+## Demo 3. Injecting beans.
+
+Field, method and constructor injection is supported in Micronaut and Spring.

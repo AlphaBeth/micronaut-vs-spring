@@ -1,21 +1,29 @@
 package com.alphabeth.micronaut.serivces.impl;
 
+import com.alphabeth.micronaut.serivces.RandomValueService;
 import com.alphabeth.micronaut.serivces.TestService;
+import io.micronaut.context.annotation.Primary;
 import io.micronaut.context.annotation.Prototype;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Primary // primary beans will be used if multiple candidates are present in context
 @Prototype
 @Slf4j
 public class TestServiceImpl implements TestService {
+
+    private final RandomValueService randomValueService;
+
     @Override
     public String answer() {
-        return "42";
+        return "Primary " + randomValueService.random();
     }
 
-    public TestServiceImpl() {
+    // single constructor will be used for injection
+    public TestServiceImpl(RandomValueService randomValueService) {
+        this.randomValueService = randomValueService;
         log.info("{} was created", this.getClass().getName());
     }
 
