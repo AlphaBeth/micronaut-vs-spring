@@ -5,3 +5,11 @@ random:
   service:
     min: 90
     max: 100
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/test_db
+    driverClassName: org.postgresql.Driver
+    username: test_user
+    password: 'test_password'
+    schema-generate: none
+    dialect: postgres

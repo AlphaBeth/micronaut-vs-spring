@@ -120,3 +120,7 @@ Spring's AOP is more powerful. It allows intercepting almost every method call w
 around beans and AspectJ's pointcuts.
 
 In Micronaut only annotated methods/classes could be intercepted.
+
+## Demo 7. Data repositories.
+
+

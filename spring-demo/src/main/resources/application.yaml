@@ -5,3 +5,18 @@ random:
 logging:
   level:
     com.alphabeth.spring.aop.LoggableHandler: debug
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      jdbc-url: jdbc:postgresql://localhost:5432/test_db
+    data-password: test_password
+    data-username: test_user
+    url: jdbc:postgresql://localhost:5432/test_db
+    password: test_password
+    username: test_user
+  data:
+    jdbc:
+      repositories:
+        enabled: true
