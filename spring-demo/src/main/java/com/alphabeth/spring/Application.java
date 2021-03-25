@@ -9,13 +9,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
-        try (final ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class)){
+        try (final ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class)) {
             System.out.println(applicationContext.getBean(RandomValueService.class).random());
             System.out.println(applicationContext.getBean(TestService.class).answer());
             System.out.println(applicationContext.getBean(TestService.class).answer());
-            System.out.println(applicationContext.getBean("another", TestService.class).answer()); // get bean by given name
-            System.out.println(applicationContext.getBean("fieldInjectionTestService", TestService.class).answer()); // camelCased class name
-            System.out.println(applicationContext.getBean("methodInjectionTestService", TestService.class).answer());
+            System.out.println(applicationContext.getBean("another", TestService.class).answer());
+            System.out.println(applicationContext.getBean("random", TestService.class).answer());
         }
     }
 }

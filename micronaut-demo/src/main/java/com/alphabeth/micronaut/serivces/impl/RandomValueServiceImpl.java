@@ -5,10 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.inject.Singleton;
 import java.util.concurrent.ThreadLocalRandom;
 
-@Singleton
 @Slf4j
 public class RandomValueServiceImpl implements RandomValueService {
 

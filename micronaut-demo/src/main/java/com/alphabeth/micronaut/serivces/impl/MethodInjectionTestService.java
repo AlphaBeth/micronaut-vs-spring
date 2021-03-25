@@ -3,11 +3,8 @@ package com.alphabeth.micronaut.serivces.impl;
 import com.alphabeth.micronaut.serivces.RandomValueService;
 import com.alphabeth.micronaut.serivces.TestService;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.util.List;
 
-@Singleton
 public class MethodInjectionTestService implements TestService {
 
     @Override
@@ -15,7 +12,6 @@ public class MethodInjectionTestService implements TestService {
         return "Method injection";
     }
 
-    @Inject // method injection
     public void injectServices(
             List<RandomValueService> services // lists can be injected
     ) {

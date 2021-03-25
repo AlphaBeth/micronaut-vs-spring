@@ -13,9 +13,8 @@ public class Application {
             System.out.println(applicationContext.getBean(RandomValueService.class).random());
             System.out.println(applicationContext.getBean(TestService.class).answer());
             System.out.println(applicationContext.getBean(TestService.class).answer());
-            System.out.println(applicationContext.getBean(TestService.class, Qualifiers.byName("another")).answer()); // get bean by given name
-            System.out.println(applicationContext.getBean(TestService.class, Qualifiers.byName("fieldInjection")).answer()); // auto generated name - remove interface name, convert to camelCase
-            System.out.println(applicationContext.getBean(TestService.class, Qualifiers.byName("methodInjection")).answer());
+            System.out.println(applicationContext.getBean(TestService.class, Qualifiers.byName("another")).answer());
+            System.out.println(applicationContext.getBean(TestService.class, Qualifiers.byName("random")).answer());
         }
     }
 }
