@@ -13,3 +13,6 @@ datasources:
     password: 'test_password'
     schema-generate: none
     dialect: postgres
+query:
+  counting:
+    enabled: true

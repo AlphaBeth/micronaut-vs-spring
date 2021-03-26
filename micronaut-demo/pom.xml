@@ -90,6 +90,13 @@
       <artifactId>javax.annotation-api</artifactId>
       <scope>compile</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/net.ttddyy/datasource-proxy -->
+    <dependency>
+      <groupId>net.ttddyy</groupId>
+      <artifactId>datasource-proxy</artifactId>
+      <version>1.7</version>
+    </dependency>
+
 
     <!-- TESTS -->
     <dependency>

@@ -138,3 +138,7 @@ Spring supports optimistic locking.
 
 Just REST.
 
+## Demo 9. Query counting.
+
+* 
+
