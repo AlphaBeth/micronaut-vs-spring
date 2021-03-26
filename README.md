@@ -134,3 +134,7 @@ Micronaut supports custom joins in queries.
 
 Spring supports optimistic locking.
 
+## Demo 8. Rest.
+
+Just REST.
+

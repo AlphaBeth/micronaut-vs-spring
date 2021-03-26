@@ -19,6 +19,7 @@
     <release.version>11</release.version>
     <micronaut.version>2.4.1</micronaut.version>
     <exec.mainClass>com.alphabeth.micronaut.Application</exec.mainClass>
+    <micronaut.runtime>netty</micronaut.runtime>
   </properties>
 
   <repositories>
@@ -56,6 +57,17 @@
       <groupId>io.micronaut.sql</groupId>
       <artifactId>micronaut-jdbc-hikari</artifactId>
       <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.micronaut</groupId>
+      <artifactId>micronaut-http-server-netty</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut</groupId>
+      <artifactId>micronaut-http-client</artifactId>
+      <scope>compile</scope>
     </dependency>
     <!-- MISC -->
     <dependency>
