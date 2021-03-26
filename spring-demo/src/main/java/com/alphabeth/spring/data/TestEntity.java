@@ -5,8 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -18,5 +20,6 @@ public class TestEntity {
 
     private String value;
 
-    private List<RelatedEntity> relatedEntities;
+    @MappedCollection(idColumn = "test_entity_id")
+    private Set<RelatedEntity> relatedEntities;
 }

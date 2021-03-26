@@ -32,5 +32,6 @@ public class MicronautDataTest {
         Assertions.assertEquals(name.getContent().size(), 2);
         Assertions.assertNotNull(name.getContent().get(0).getRelatedEntities());
         Assertions.assertNotNull(name.getContent().get(1).getRelatedEntities());
+        Assertions.assertEquals(name.getContent().get(1).getRelatedEntities().size(), 1);
     }
 }

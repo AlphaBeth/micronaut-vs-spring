@@ -123,4 +123,14 @@ In Micronaut only annotated methods/classes could be intercepted.
 
 ## Demo 7. Data repositories.
 
+`docker-compose up` to start database. Tests require a started DB.
+
+Micronaut tries to avoid runtime proxies, so I choose to do not use JPA in comparison, just simple JDBC.
+
+Both Spring and Micronaut supports mapping DB queries results to some entities, auto generated queries from
+"repositories", custom queries, custom repository implementation.
+
+Micronaut supports custom joins in queries.
+
+Spring supports optimistic locking.
 
